@@ -21,7 +21,7 @@ public class RateController {
 
     @GetMapping("/get_rates/{hotel_code}")
     public List<Rate> getRates(@PathVariable String hotel_code) throws InterruptedException {
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.MILLISECONDS.sleep(500);
         return rateService.getRates(hotel_code);
     }
 
